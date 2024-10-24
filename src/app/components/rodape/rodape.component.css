@@ -1,0 +1,35 @@
+.footer_ {
+  background: linear-gradient(180deg, rgba(230, 161, 161, 0.966), rgba(255, 255, 255, 1));
+  height: 50px;
+  border-radius: 8px;
+}
+
+.footer_ p {
+  text-align: center;
+
+}
+
+
+@media (max-width: 575.98px) {
+
+}
+
+
+@media (max-width: 767.98px) {
+  .footer_ p {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 991.98px) {
+
+}
+
+@media (max-width: 1199.98px) {
+
+}
+
+
+@media (max-width: 1399.98px) {
+
+}

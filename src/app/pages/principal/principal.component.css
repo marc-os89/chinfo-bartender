@@ -1,0 +1,129 @@
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.little-text {
+  width: 65%;
+}
+
+.little-text h1 {
+  text-align: center;
+}
+
+.drink-image {
+  justify-content: center;
+  align-items: center;
+}
+
+.little-text p {
+  margin: 0px 0px 0px 16px;
+}
+
+.drink-image img {
+  height: 329px;
+  width: 285px;
+}
+
+.middle-text {
+  padding: 30px 10px 10px 10px;
+  margin:  30px 10px 10px 10px;
+}
+
+.middle-text h2 {
+  color: black;
+}
+
+.middle {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.lista-drinks {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom right, rgba(255, 196, 196, 0.966), rgb(255, 224, 167));
+}
+
+.lista-drinks dl {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.0em;
+  padding: 16px;
+  color: rgba(24, 23, 23, 0.767);
+}
+
+/* x-large screens */
+
+@media (max-width: 1399.98px) {
+
+}
+
+/* large screens */
+
+@media (max-width: 1199.98px) {
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .drink-image {
+    padding: 8px 12px 8px 36px;
+  }
+  .little-text {
+    width: 100%;
+  }
+  .drink-image img {
+    height: 286px;
+    width: 236px;
+  }
+  .lista-drinks dl {
+    font-size: 1.6em;
+  }
+}
+
+/* medium screens  */
+
+@media (max-width: 991.98px) {
+
+}
+
+/* small screens */
+
+@media (max-width: 767.98px) {
+  .drink-image img {
+    height: 235px;
+    width: 185px;
+  }
+  .middle {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .middle img {
+    padding: 16px;
+  }
+
+}
+
+/* extra small screens */
+
+@media (max-width: 575.98px) {
+  .drink-image img {
+    height: 164px;
+    width: 128px;
+  }
+
+  .middle img {
+    width: 156px;
+    height: 156px;
+  }
+
+}
+
+
+
+
+
+
+

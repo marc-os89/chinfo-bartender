@@ -1,0 +1,41 @@
+<form [formGroup]="form" (ngSubmit)="handleNgSubmit()">
+  <div class="form-field">
+    <label for="name">Nome</label>
+    <input type="text" id="name" formControlName="name">
+    <control-error *ngIf="controlErrorMessageIsVisible(form.controls['name'])"
+      [controlErrors]="form.controls['name'].errors">
+    </control-error>
+  </div>
+  <div class="form-field">
+    <label for="cellPhone">Celular</label>
+    <input type="tel" id="cellPhone" formControlName="cellPhone" mask="(00) 00000-0000">
+    <control-error *ngIf="controlErrorMessageIsVisible(form.controls['cellPhone'])"
+      [controlErrors]="form.controls['cellPhone'].errors">
+    </control-error>
+
+  </div>
+  <div class="form-field">
+    <label for="date">Data do evento</label>
+    <input type="tel" id="date" formControlName="date" mask="00/00/0000 00:00" [dropSpecialCharacters]="false">
+    <control-error *ngIf="controlErrorMessageIsVisible(form.controls['date'])"
+      [controlErrors]="form.controls['date'].errors">
+    </control-error>
+  </div>
+  <div class="form-field">
+    <label for="duration">Duração (em horas)</label>
+    <input type="tel" id="duration" formControlName="duration" mask="09" [dropSpecialCharacters]="false">
+    <control-error *ngIf="controlErrorMessageIsVisible(form.controls['duration'])"
+      [controlErrors]="form.controls['duration'].errors">
+    </control-error>
+  </div>
+  <div class="form-field">
+    <label for="description">Descrição do evento</label>
+    <textarea id="description"  formControlName="description"></textarea>
+    <control-error *ngIf="controlErrorMessageIsVisible(form.controls['description'])"
+      [controlErrors]="form.controls['description'].errors">
+    </control-error>
+  </div>
+  <button type="submit">Enviar</button>
+</form>
+
+<pre> {{ form.value | json }}</pre>
