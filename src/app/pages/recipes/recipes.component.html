@@ -1,5 +1,10 @@
 <app-container>
 <main>
+  <div *ngFor="let recipe of recipes">
+    <h2>{{ recipe.drinkName }}</h2>
+    <p>Ingredientes: {{ recipe.ingredients }}</p>
+    <p>Preparo: {{ recipe.prepare }}</p>
+  </div>
 
 </main>
 </app-container>

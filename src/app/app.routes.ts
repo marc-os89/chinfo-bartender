@@ -4,6 +4,7 @@ import { RecipesComponent } from './pages/recipes/recipes.component';
 import { ScheduleComponent } from './pages/schedule/schedule.component';
 import { VideosComponent } from './pages/videos/videos.component';
 
+
 export const routes: Routes = [
   {
     path: '',

@@ -5,6 +5,7 @@ import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideEnvironmentNgxMask } from 'ngx-mask';
 import { ControlErrors, FormsModule } from '@bruno-bombonate/ngx-forms';
+import { provideHttpClient } from '@angular/common/http';
 
 const controlErrorsCustom: ControlErrors = {
   required: (error: any) => 'Por favor, informe este campo.',
@@ -16,7 +17,8 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideClientHydration(),
     provideEnvironmentNgxMask(),
-    importProvidersFrom(FormsModule.forRoot(controlErrorsCustom))
+    importProvidersFrom(FormsModule.forRoot(controlErrorsCustom)),
+    provideHttpClient()
   ],
 
 };
