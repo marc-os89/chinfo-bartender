@@ -15,7 +15,7 @@
 
   </div>
   <div class="form-field">
-    <label for="date">Data do evento</label>
+    <label for="date">Data e horário do evento</label>
     <input type="tel" id="date" formControlName="date" mask="00/00/0000 00:00" [dropSpecialCharacters]="false">
     <control-error *ngIf="controlErrorMessageIsVisible(form.controls['date'])"
       [controlErrors]="form.controls['date'].errors">
