@@ -43,6 +43,8 @@
 .lista-drinks {
   display: flex;
   flex-direction: column;
+  margin: 10px;
+  border-radius: 0px 0px 16px 16px;
   background-image: linear-gradient(to bottom right, rgba(255, 196, 196, 0.966), rgb(255, 224, 167));
 }
 
