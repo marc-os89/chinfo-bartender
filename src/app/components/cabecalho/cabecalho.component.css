@@ -11,6 +11,12 @@
   color: rgb(252, 210, 227);
 }
 
+.menu__itens {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  overflow: hidden;
+}
 .menu__itens a {
   font-family: "Poppins", sans-serif;
   font-size: 1.4em;
@@ -20,15 +26,20 @@
 }
 
 .menu__itens a:hover {
-  background-color: rgb(216, 95, 95);
+  background-color: rgba(233, 91, 91, 0.658);
   border-radius: 8px;
   font-weight: 550;
   text-decoration: underline;
 }
 
-
-
-
+.hamburger {
+  display: none;
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
 
 
 
@@ -48,16 +59,43 @@
 
  /* Small screens */
 @media (max-width: 767.98px) {
+  .menu__itens {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
   .menu__itens a{
     font-size: 1.2em;
+    padding: 10px;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: white;
   }
- }
-
- /* Extra Small Screens  */
- @media (max-width: 575.98px) {
+  /* .hamburguer__login-icon img {
+    margin-top: 10px;
+  } */
+  .hamburger {
+    display: block;
+  }
   .login__icon {
     display: none;
   }
+ }
+
+ /* @media (min-width: 768px) {
+   .menu__itens {
+    display: flex !important;
+    flex-direction: row;
+    }
+
+     .hamburguer__login-icon {
+      display: none;
+    }
+  } */
+
+ /* Extra Small Screens  */
+ @media (max-width: 575.98px) {
   .menu__itens a{
     font-size: 1em;
   }

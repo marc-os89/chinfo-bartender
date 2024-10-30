@@ -1,14 +1,17 @@
 <header>
   <nav class="cabecalho__container">
     <div class="menu__itens">
-      <a routerLink="/principal"> Home </a>
-      <a routerLink="/receitas"> Receitas </a>
-      <a routerLink="/agendamento"> Agendamento </a>
-      <a routerLink="/videos"> Videos </a>
+      <a routerLink="/principal" (click)="hideMenu()">Home</a>
+      <a routerLink="/receitas" (click)="hideMenu()">Receitas</a>
+      <a routerLink="/agendamento" (click)="hideMenu()">Agendamento</a>
+      <a routerLink="/videos" (click)="hideMenu()">Videos</a>
+      <!-- <a routerLink="/principal" (click)="hideMenu()" class="hamburger__login-icon">
+        <img src="../../../assets/images/drink-2-icon.png" alt="icone de login">
+      </a> -->
     </div>
     <div class="login__icon">
       <a routerLink="/principal"><img src="../../../assets/images/drink-2-icon.png" alt="icone de login" ></a>
     </div>
+    <button class="hamburger" (click)="toggleMenu()">☰</button>
   </nav>
-
 </header>
