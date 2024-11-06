@@ -25,15 +25,19 @@ export class CabecalhoComponent implements OnInit {
   }
 
   toggleMenu(): void {
-    const menu = document.querySelector('.menu__itens') as HTMLElement;
-    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex'
+    if (typeof document !== 'undefined'){
+      const menu = document.querySelector('.menu__itens') as HTMLElement;
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
   }
 
   hideMenu(): void {
-     const menu = document.querySelector('.menu__itens') as HTMLElement;
-      if (menu.style.display === 'flex') {
-        menu.style.display = 'none';
-      }
+    if (typeof document !== 'undefined') {
+      const menu = document.querySelector('.menu__itens') as HTMLElement;
+       if (menu.style.display === 'flex') {
+         menu.style.display = 'none';
+       }
+    }
   }
 
   @HostListener('window:resize', ['$event'])
@@ -46,4 +50,15 @@ export class CabecalhoComponent implements OnInit {
       menu.style.display = 'none';
     }
   }
+
+  @HostListener('document:click', ['$event'])
+  onClick(event: Event): void {
+    const menu = document.querySelector('.menu__itens') as HTMLElement;
+    const hamburger = document.querySelector('.hamburger') as HTMLElement;
+
+    if (menu && hamburger && !menu.contains(event.target as Node) && !hamburger.contains(event.target as Node)) {
+      menu.style.display = 'none';
+    }
+  }
+
 }

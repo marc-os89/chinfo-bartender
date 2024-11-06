@@ -36,6 +36,7 @@
     </control-error>
   </div>
   <button type="submit">Enviar</button>
+<div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
 </form>
 
 <pre> {{ form.value | json }}</pre>

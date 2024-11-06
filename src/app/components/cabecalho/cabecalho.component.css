@@ -41,8 +41,6 @@
   cursor: pointer;
 }
 
-
-
 @media (max-width: 991.98px) {
 
  }
@@ -62,9 +60,17 @@
   .menu__itens {
     display: none;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    height: 100vh;
     text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(75, 2, 2, 0.9);
   }
+
   .menu__itens a{
     font-size: 1.2em;
     padding: 10px;
@@ -72,27 +78,50 @@
     border-style: solid;
     border-color: white;
   }
+
+  .menu__itens a:hover {
+    background-color: rgba(241, 50, 50, 0.603);
+    border-radius: 2px;
+    text-decoration: underline;
+  }
+
   /* .hamburguer__login-icon img {
     margin-top: 10px;
   } */
+
   .hamburger {
     display: block;
   }
+
+  .close-menu {
+    display: block;
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin: 20px 0px 0px 0px;
+  }
+
   .login__icon {
     display: none;
   }
  }
 
- /* @media (min-width: 768px) {
+ @media (min-width: 768px) {
    .menu__itens {
     display: flex !important;
     flex-direction: row;
     }
 
-     .hamburguer__login-icon {
+     .hamburger {
       display: none;
     }
-  } */
+
+    .close-menu {
+      display: none;
+    }
+  }
 
  /* Extra Small Screens  */
  @media (max-width: 575.98px) {

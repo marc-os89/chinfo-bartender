@@ -25,6 +25,8 @@ export class ScheduleFormComponent {
     description: new FormControl<null | string>(null, [Validators.required])
   })
 
+  public successMessage: string | null = null;
+
   public controlErrorMessageIsVisible(abstractControl: AbstractControl) {
     if(abstractControl.touched || abstractControl.dirty) {
       return true;
@@ -35,7 +37,17 @@ export class ScheduleFormComponent {
   public handleNgSubmit() {
     this.form.markAllAsTouched();
     if (this.form.valid) {
-      console.log(this.form.value)
+      const formValue = this.form.value;
+      if (formValue.date) {
+        const dateString = formValue.date;
+        const [dia, mes, ano, horas, minutos] = dateString.split(/[\s/:]/);
+        const dataFormatada = `${ano}-${mes}-${dia}T${horas}:${minutos}:00`
+        const data = new Date(dataFormatada);
+
+        console.log({ ...formValue, dateConverted: data });
+      }
+      this.form.reset(); // Limpa os dados do formulário
+      this.successMessage = "Dados enviados com sucesso, aguarde o contato.";
     }
   }
 }
